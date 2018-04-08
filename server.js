@@ -111,16 +111,7 @@ app.get('/', function (req, res) {//handling specific URLs
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
-
-//app.get('/article-two', function (req,res){
-    //res.send('Article two requested and will be served here.');
-    //res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-//});
-
-
-
-app.get('/aticleName', function (req,res){
+app.get('/:aticleName', function (req,res){
 //articleName == article-one
 //articles[articleName] == {} content object for article one
 
