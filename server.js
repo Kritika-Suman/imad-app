@@ -50,7 +50,7 @@ var article-three: {
             
 },
 
-}
+};
 
 function createTemplate(data){
     
