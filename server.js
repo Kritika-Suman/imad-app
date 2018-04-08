@@ -48,7 +48,7 @@ var articles = {
                     This is the content for my three article.
                 </p>
             
-},
+}
 
 };
 
@@ -65,7 +65,7 @@ function createTemplate(data){
     
     <head>
         
-        <tittle${tittle}</tittle>
+        <tittle>${tittle}</tittle>
         <meta name="viewport" content="width-device-width, initial-scale-1" />
         
         <link href="/ui/style.css" rel="stylesheet" />
@@ -101,7 +101,8 @@ function createTemplate(data){
     </body>
 
 </html>
-;
+
+';
 
 return htmlTemplate;
     
