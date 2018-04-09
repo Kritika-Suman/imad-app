@@ -55,7 +55,7 @@ app.get('/submit-name/:name', function(req,res){
     
     names.push(name);
     //JSON : Javascript Object Notation - used to stringyfy 
-    res.send(JSON,stringify(names));
+    res.send(JSON.stringify(names));
     
 });
 
