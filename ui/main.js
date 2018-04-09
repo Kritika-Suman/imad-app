@@ -69,7 +69,7 @@ submit.onclick = function(){
     for(var i=0, i<names.length; i++){
         list += '<li>'+names[i]+'</li>';
     }
-    vr ul = document.getElementById('nameList');
+    var ul = document.getElementById('nameList');
     ul.innerHTML = list;
     
 };    
