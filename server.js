@@ -10,6 +10,16 @@ app.get('/', function (req, res) {//handling specific URLs
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+
+var counter = 0;
+app.get('/counter', function(req,res){
+    
+    counter = counter + 1;
+    res.send(counter.toString());
+    
+});
+
+
 app.get('/article-one', function (req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
  });
