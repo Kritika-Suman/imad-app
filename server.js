@@ -10,7 +10,7 @@ var config = {
     database : 'kritikasuman2016',
     host : 'db.imad.hasura-app.io',
     port : '5432',
-    password : process.env.DB_PASSWERD
+    password : 'db-kritikasuman2016-99836'//process.env.DB_PASSWERD
     
 };
 
