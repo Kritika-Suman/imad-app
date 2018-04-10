@@ -62,7 +62,7 @@ app.get('/submit-name', function(req,res){//URL: /submit-name?name=xxxx
 app.get('/article-one/:articleName', function (req,res){
    //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
   
-   pool.query("SELECT * FROM article WHERE title "= + "" + req.params.articleName + "" ,function(err,result){
+   pool.query("SELECT * FROM article WHERE title = ' " + req.params.articleName + " ' " ,function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }else{
@@ -70,7 +70,8 @@ app.get('/article-one/:articleName', function (req,res){
                res.status.(404).send('Article not found');
            }else{
                var articleData = result.rows[0];
-               res.sendFile(path.join(__dirname, 'ui', 'articleData'));
+              // res.sendFile(path.join(__dirname, 'ui', 'articleData'));
+               res.send(JSON.stringify(articleData));
            }
        }
    });
