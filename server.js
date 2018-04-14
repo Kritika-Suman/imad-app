@@ -4,6 +4,9 @@ var morgan = require('morgan');//Used to handle what request is comming and how 
 var path = require('path');
 
 var Pool = require('pg').Pool;
+
+var crypto = require('crypto');
+
 var config = {
     
     user : 'kritikasuman2016',
@@ -21,6 +24,18 @@ app.get('/', function (req, res) {//handling specific URLs
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+function hash (input,salt){
+    //How do we create a hash ?
+    var hashed = crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+    
+}
+
+app.get('/hash/:input',function(req,res){
+    
+    var hashedString = hash(req.params.input);
+    res.send(hashedString);
+    
+});
 
 var pool = new Pool(config);
 app.get('/test-db', function(req,res){
